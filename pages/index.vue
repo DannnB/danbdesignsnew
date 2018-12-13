@@ -7,6 +7,7 @@
       <h2 class="subtitle">
         New site on its way!
       </h2>
+      <p>Frontend Engineer</p>
     </div>
   </section>
 </template>
