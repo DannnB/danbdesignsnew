@@ -1,0 +1,66 @@
+<template>
+  <!-- <div id="post" v-editable="blok"> -->
+  <div id="post">
+    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+    <section class="post-content">
+      <h1>{{ title }}</h1>
+      <p>{{ published }}</p>
+      <hr>
+      <div v-html="content"></div>
+    </section>
+  </div>
+</template>
+
+<script>
+// get markdown editor
+const marked = require("marked");
+
+export default {
+  asyncData(context) {
+    return context.app.$storyapi
+      .get("cdn/stories/blog/" + context.params.postId, {
+        version: process.env.NODE_ENV == "production" ? "published" : "draft"
+      })
+      .then(res => {
+        return {
+          id: res.data.story.slug,
+          // title: res.data.story.content.title,
+          previewText: res.data.story.content.excerpt,
+          thumbnailUrl: res.data.story.content.thumbnailImage,
+          published: res.data.story.content.published_at,
+
+          // blok: res.data.story.content,
+          image: res.data.story.content.thumbnailImage,
+          title: res.data.story.content.title,
+          content: marked(res.data.story.content.content)
+        };
+      });
+  },
+  mounted() {
+    this.$storyblok.init();
+    this.$storyblok.on("change", () => {
+      location.reload(true);
+    });
+  }
+};
+</script>
+
+<style>
+.post-thumbnail {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-content {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.post-content p {
+  white-space: pre-line;
+}
+</style>
+

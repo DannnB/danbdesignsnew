@@ -1,18 +1,13 @@
 <template>
-  <div class="page">
-    <section id="intro">
-      <h1>DanB - Frontend Engineer - New site soon!</h1>
-    </section>
-    <section id="posts">
-      <PostPreview
-        v-for="post in posts"
-        :key="post.id"
-        :title="post.title"
-        :excerpt="post.previewText"
-        :thumbnailImage="post.thumbnailUrl"
-        :id="post.id" />
-    </section>
-  </div>
+  <section id="posts">
+    <PostPreview
+      v-for="post in posts"
+      :key="post.id"
+      :title="post.title"
+      :excerpt="post.previewText"
+      :thumbnailImage="post.thumbnailUrl"
+      :id="post.id" />
+  </section>
 </template>
 
 <script>
@@ -29,19 +24,20 @@ export default {
         starts_with: "blog/"
       })
       .then(res => {
+        // console.log("Data: ", res.data.stories);
         return {
           posts: res.data.stories.map(bp => {
             return {
               id: bp.slug,
               title: bp.content.title,
               previewText: bp.content.excerpt,
-              thumbnailUrl: bp.content.thumbnailImage
+              thumbnailUrl: bp.content.thumbnailImage,
+              published: bp.content.published_at
             };
           })
         };
       });
   }
-
   // data() {
   //   return {
   //     posts: [
