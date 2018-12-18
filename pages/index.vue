@@ -1,8 +1,11 @@
 <template>
   <div class="page">
     <section id="intro">
-      <h1>DanB - Frontend Engineer - New site soon!</h1>
+      <h1>DanB</h1>
+      <p>I am a Frontend Engineer from Worcester, UK.</p>
     </section>
+
+    <h2>Some rants to read if you have time...</h2>
     <section id="posts">
       <PostPreview
         v-for="post in posts"
