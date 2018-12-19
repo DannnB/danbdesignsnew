@@ -13,13 +13,15 @@
         :title="post.title"
         :excerpt="post.previewText"
         :thumbnailImage="post.thumbnailUrl"
-        :id="post.id" />
+        :id="post.id" 
+        :published="post.published"/>
     </section>
   </div>
 </template>
 
 <script>
 import PostPreview from "@/components/Blog/PostPreview";
+import moment from 'moment';
 
 export default {
   components: {
@@ -38,7 +40,9 @@ export default {
               id: bp.slug,
               title: bp.content.title,
               previewText: bp.content.excerpt,
-              thumbnailUrl: bp.content.thumbnailImage
+              thumbnailUrl: bp.content.thumbnailImage,
+              published: moment(bp.published_at)
+                .format('DD/MM/YY h:mm a')  
             };
           })
         };

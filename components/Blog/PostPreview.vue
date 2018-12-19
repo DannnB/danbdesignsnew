@@ -10,6 +10,9 @@
         <h1>{{ title }}</h1>
         <p>{{ excerpt }}</p>
       </div>
+      <div class="post-preview-meta">
+        <p>Date: {{ published }} </p>
+      </div>
     </article>
   </nuxt-link>
 </template>
@@ -32,6 +35,10 @@ export default {
     id: {
       type: String,
       required: true
+    },
+    published: {
+      type: String,
+      required: false
     }
   }
 };
@@ -44,10 +51,10 @@ a {
 }
 
 .post-preview {
-  border-radius: 3px;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+  /* border-radius: 3px; */
+  /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5); */
   width: 90%;
-  height: 20rem;
+  min-height: 30rem;
   margin: 1rem;
 }
 
@@ -61,6 +68,11 @@ a {
 .post-preview-content {
   text-align: center;
   padding: 1rem;
+}
+
+.post-preview-meta {
+  text-align: center;
+  font-size: 14px;
 }
 
 @media (min-width: 35rem) {
