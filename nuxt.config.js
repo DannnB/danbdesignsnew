@@ -62,6 +62,9 @@ module.exports = {
       '@nuxtjs/auth',
       '@nuxtjs/axios',
     ],
+    ["@nuxtjs/google-analytics", {
+      id: "UA-42270530-2"
+    }]
   ],
 
   generate: {
