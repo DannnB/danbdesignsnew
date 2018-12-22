@@ -4,7 +4,7 @@
       <ul class="nav-links">
         <nuxt-link to="/" tag="li" class="nav-link"><a>Home</a></nuxt-link>
         <nuxt-link to="/blog" tag="li" class="nav-link"><a>Blog</a></nuxt-link>
-        <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link>
+        <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link> -->
         <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>My Profile</a></nuxt-link> -->
 
         <!-- <a>Logout</a> -->
@@ -18,12 +18,14 @@
 
 <style scoped>
   .main-header {
-    position: fixed;
+    margin: 40px 0;
+    height: 40px;
+    /* position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: #022d30;
-    height: 4.5rem;
+    height: 4.5rem; */
   }
 
   .main-nav {
@@ -49,20 +51,23 @@
     padding: 0.3rem;
   }
 
-  .nav-link.nuxt-link-active {
-    border-bottom: 3px solid #06c4d1;
+  /* .nav-link.nuxt-link-active {
+    border-bottom: 3px solid #424242;
+  } */
+  .nav-link.nuxt-link-exact-active {
+    border-bottom: 3px solid #424242;
   }
 
   .nav-link a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: 424242;
   }
 
   .nav-link a:hover,
   .nav-link a:active,
   .nav-link.nuxt-link-active a {
-    color: #06c4d1;
+    color: #999999;
   }
 </style>
 

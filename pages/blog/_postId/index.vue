@@ -1,9 +1,12 @@
 <template>
   <!-- <div id="post" v-editable="blok"> -->
   <div id="post">
-    <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+    <div class="intro" :style="{backgroundImage: 'url(' + image + ')'}">
+      <div class="overlay">
+        <h1>{{ title }}</h1>
+      </div>
+    </div>
     <section class="post-content">
-      <h1>{{ title }}</h1>
       <p>{{ published }}</p>
       <hr>
       <div v-html="content"></div>
@@ -46,12 +49,6 @@ export default {
 </script>
 
 <style>
-.post-thumbnail {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-}
 
 .post-content {
   width: 80%;

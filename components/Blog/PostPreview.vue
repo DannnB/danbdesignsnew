@@ -1,20 +1,22 @@
 <template>
-  <nuxt-link
-    :to="'/blog/' + id"
-    class="post-preview">
-    <article>
-      <div
-        :style="{backgroundImage: 'url(' + thumbnailImage + ')'}"
-        class="post-preview-thumbnail"></div>
-      <div class="post-preview-content">
-        <h1>{{ title }}</h1>
-        <p>{{ excerpt }}</p>
-      </div>
-      <div class="post-preview-meta">
-        <p>Date: {{ published }} </p>
-      </div>
-    </article>
-  </nuxt-link>
+  <b-col>
+    <nuxt-link
+      :to="'/blog/' + id"
+      class="post-preview">
+      <article>
+        <div
+          :style="{backgroundImage: 'url(' + thumbnailImage + ')'}"
+          class="post-preview-thumbnail"></div>
+        <div class="post-preview-content">
+          <h2>{{ title }}</h2>
+          <p>{{ excerpt }}</p>
+        </div>
+        <div class="post-preview-meta">
+          <p>Date: {{ published }} </p>
+        </div>
+      </article>
+    </nuxt-link>
+  </b-col>
 </template>
 
 <script>
@@ -45,10 +47,16 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+html, body  {
+  font-family: 'Roboto', sans-serif;
+}
 a {
   text-decoration: none;
   color: black;
 }
+
+
 
 .post-preview {
   /* border-radius: 3px; */
@@ -68,6 +76,9 @@ a {
 .post-preview-content {
   text-align: center;
   padding: 1rem;
+}
+.post-preview-content h1 {
+  font-weight: 700;
 }
 
 .post-preview-meta {

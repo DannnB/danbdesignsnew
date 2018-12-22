@@ -1,14 +1,25 @@
 <template>
-  <section id="posts">
-    <PostPreview
-      v-for="post in posts"
-      :key="post.id"
-      :title="post.title"
-      :excerpt="post.previewText"
-      :thumbnailImage="post.thumbnailUrl"
-      :id="post.id"
-      :published="post.published"/>
-  </section>
+  <div class="blog">
+    <div class="intro">
+      <div class="overlay">
+        <h1>Blog</h1>
+      </div>
+    </div>
+    
+    <b-container>
+      <b-row>
+        <PostPreview
+          v-for="post in posts"
+          :key="post.id"
+          :title="post.title"
+          :excerpt="post.previewText"
+          :thumbnailImage="post.thumbnailUrl"
+          :id="post.id" 
+          :published="post.published"/>
+      </b-row>
+    </b-container>
+
+  </div>
 </template>
 
 <script>

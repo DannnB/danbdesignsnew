@@ -12,7 +12,7 @@ module.exports = {
     htmlAttrs: {
       lang: 'en-gb'
     },
-    title: "Dan B - Frontend Engineer",
+    title: "Dan B - Frontend Engineer & Web Designer",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -20,15 +20,12 @@ module.exports = {
         hid: "description",
         name: "description",
         content:
-          "An awesome blog about tech stuff, built with Nuxt and Storyblok"
+          "Dan B. Fontend Engineer. Web Designer. UI/UX, and Accessibility advocate."
       }
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css?family=Lato:400,700"
-      }
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Roboto:400,700"}
     ]
   },
 
@@ -40,7 +37,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ["~/assets/styles.css"],
 
   /*
   ** Plugins to load before mounting the App
@@ -52,6 +49,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
+    'bootstrap-vue/nuxt',
     [
       "storyblok-nuxt",
       {
@@ -62,8 +60,8 @@ module.exports = {
         cacheProvider: "memory"
       },
       '@nuxtjs/auth',
-      '@nuxtjs/axios'
-    ]
+      '@nuxtjs/axios',
+    ],
   ],
 
   generate: {
