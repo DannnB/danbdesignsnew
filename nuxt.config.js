@@ -67,6 +67,11 @@ module.exports = {
       id: "UA-42270530-2"
     }]
   ],
+  sitemap: {
+    generate: true,
+    hostname: 'https://danbdesigns.co.uk',
+    exclude: []
+  },
 
   generate: {
     routes: function() {
