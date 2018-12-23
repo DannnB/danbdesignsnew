@@ -16,12 +16,13 @@ body {
     background-color: rgba(0,0,0,0.5);
     padding: 80px;
     height: 100%;
+    min-height: 400px;
 }
 
 .intro {
     background-image: url(https://a.storyblok.com/f/51520/6000x4000/5c247b5b29/clement-h-544786-unsplash.jpg);
     background-size: cover;
-    height: 400px;
+    min-height: 400px;
 }
 
 .intro h1 {
@@ -59,5 +60,13 @@ body {
     }
     .intro p {
         font-size: 1.3rem;
+    }
+}
+@media (max-width: 600px) {
+    .intro {
+        min-height: 240px;
+    }
+    .intro h1 {
+        font-size: 2.3rem;
     }
 }

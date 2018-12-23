@@ -1,13 +1,17 @@
 <template>
   <!-- <div id="post" v-editable="blok"> -->
   <div id="post">
-      <pre>{{ res }}</pre>
     <div class="intro" :style="{backgroundImage: 'url(' + image + ')'}">
       <div class="overlay">
         <h1>{{ title }}</h1>
       </div>
     </div>
     <section class="post-content">
+      <ul class="tag-list">
+        <li v-for="tag in tag_list" :key="tag">
+          {{ tag }}
+        </li>
+      </ul>
       <p>{{ published }}</p>
       <hr>
       <div v-html="content"></div>
@@ -47,7 +51,8 @@ export default {
           title: res.data.story.content.title,
           content: marked(res.data.story.content.content),
           description: res.data.story.content.description,
-          res: res.data
+          res: res.data,
+          tag_list: res.data.story.tag_list
         };
       });
   },
@@ -62,6 +67,19 @@ export default {
 
 <style>
 
+.tag-list {
+  padding: 0;
+  margin: 20px 0;
+}
+
+.tag-list li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #00586b;
+  color: #ffffff;
+  margin: 5px 4px;
+}
 .post-content {
   width: 80%;
   max-width: 500px;
