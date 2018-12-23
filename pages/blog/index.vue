@@ -27,6 +27,15 @@ import PostPreview from "@/components/Blog/PostPreview";
 import moment from 'moment';
 
 export default {
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Articles about everything I like.'}
+      ]
+    }
+  },
+
   components: {
     PostPreview
   },

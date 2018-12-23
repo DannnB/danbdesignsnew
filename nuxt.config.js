@@ -22,7 +22,8 @@ module.exports = {
         content:
           "Dan B. Fontend Engineer. Web Designer. UI/UX, and Accessibility advocate."
       },
-      { name:"google-site-verification", content:"gbsp7_kQow8w1s8OLfFXscUv0mHzw6wHR3Hkqsk9Vwk"}
+      { name:"google-site-verification", content:"gbsp7_kQow8w1s8OLfFXscUv0mHzw6wHR3Hkqsk9Vwk"},
+      { hid: 'description', name: 'description', content: 'I am a web developer &amp; designer from Worcester, UK. CSS/HTML. JS/ES6+. Node.js. A11y.'}
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

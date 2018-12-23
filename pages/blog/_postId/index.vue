@@ -1,6 +1,7 @@
 <template>
   <!-- <div id="post" v-editable="blok"> -->
   <div id="post">
+      <pre>{{ res }}</pre>
     <div class="intro" :style="{backgroundImage: 'url(' + image + ')'}">
       <div class="overlay">
         <h1>{{ title }}</h1>
@@ -19,6 +20,15 @@
 const marked = require("marked");
 
 export default {
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.description}
+      ]
+    }
+  },
+
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories/blog/" + context.params.postId, {
@@ -35,7 +45,9 @@ export default {
           // blok: res.data.story.content,
           image: res.data.story.content.thumbnailImage,
           title: res.data.story.content.title,
-          content: marked(res.data.story.content.content)
+          content: marked(res.data.story.content.content),
+          description: res.data.story.content.description,
+          res: res.data
         };
       });
   },
