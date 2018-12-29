@@ -1,20 +1,13 @@
 <template>
-  <div class="home">
+  <div class="blog">
     <div class="intro">
       <div class="overlay">
-        <h1>DanB - Frontend Engineer</h1>
-        <p>I am a web developer &amp; designer from Worcester, UK.</p>
+        <h1>Blog</h1>
       </div>
     </div>
-
+    
     <b-container>
-      <b-row class="blog-header">
-        <b-col>
-          <h2>Blog</h2>
-        </b-col>
-      </b-row>
       <b-row>
-        
         <PostPreview
           v-for="post in posts"
           :key="post.id"
@@ -25,15 +18,24 @@
           :published="post.published"/>
       </b-row>
     </b-container>
+
   </div>
 </template>
 
 <script>
 import PostPreview from "@/components/Blog/PostPreview";
 import moment from 'moment';
-import 'babel-polyfill';
 
 export default {
+  head () {
+    return {
+      title: 'Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Articles about everything I like.'}
+      ]
+    }
+  },
+
   components: {
     PostPreview
   },
@@ -44,6 +46,7 @@ export default {
         starts_with: "blog/"
       })
       .then(res => {
+        // console.log("Data: ", res.data.stories);
         return {
           posts: res.data.stories.map(bp => {
             return {
@@ -51,14 +54,14 @@ export default {
               title: bp.content.title,
               previewText: bp.content.excerpt,
               thumbnailUrl: bp.content.thumbnailImage,
-              published: moment(bp.published_at)
-                .format('DD/MM/YY h:mm a')  
+              published: 
+                moment(bp.published_at)
+                .format('DD/MM/YY h:mm a')   
             };
           })
         };
       });
   }
-
   // data() {
   //   return {
   //     posts: [
@@ -82,18 +85,18 @@ export default {
 };
 </script>
 
-<style>
-/* #posts {
+<style scoped>
+#posts {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-} */
+}
 
-/* @media (min-width: 35rem) {
+@media (min-width: 35rem) {
   #posts {
     flex-direction: row;
   }
-} */
+}
 </style>
