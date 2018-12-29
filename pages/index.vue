@@ -7,7 +7,7 @@
       <h2 class="subtitle">
         New site on its way!
       </h2>
-      <p>Frontend Engineer</p>
+      <p>I am a 25 year old Frontend Engineer from Worcester, UK.</p>
     </div>
   </section>
 </template>
