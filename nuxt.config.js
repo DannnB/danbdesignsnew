@@ -65,7 +65,10 @@ module.exports = {
       '@nuxtjs/axios',
     ],
     ["@nuxtjs/google-analytics", {
-      id: "UA-42270530-2"
+      id: 
+        process.env.NODE_ENV == "production"
+          ? "UA-42270530-2"
+          : "UA_development"
     }]
   ],
   sitemap: {
