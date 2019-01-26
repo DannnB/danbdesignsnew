@@ -10,7 +10,9 @@ body {
 }
 
 
-
+p {
+    line-height: 1.65;
+}
 
 .overlay {
     background-color: rgba(0,0,0,0.5);

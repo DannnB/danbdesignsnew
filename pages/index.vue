@@ -31,36 +31,34 @@
 
 <script>
 import PostPreview from "@/components/Blog/PostPreview";
+import PortfolioPreview from "@/components/Blog/PostPreview";
+
 import moment from 'moment';
 import 'babel-polyfill';
 
+import axios from 'axios'
+
 export default {
   components: {
-    PostPreview
+    PostPreview,
+    PortfolioPreview
   },
-  // asyncData(context) {
-  //   return context.app.$storyapi
-  //     .get("cdn/stories", {
-  //       version: context.isDev ? "draft" : "published",
-  //       starts_with: "home"
-  //     })
-  //     .then(res => {
-  //       return {
-  //         page: res.data.stories.map(bp => {
-  //           return {
-  //             id: bp.slug,
-  //             title: bp.content.title,
-  //             subtitle: bp.content.subtitle
-  //           };
-  //         })
-  //       };
-  //     });
+  // async asyncData({ query, error }) {
+  //   let [pageRes, countRes] = await Promise.all([
+  //     axios.get('/api/post/page/0'),
+  //     axios.get('/api/post/count/published'),
+  //   ])
+  //   return {
+  //      posts: pageRes.data.list,
+  //      total: countRes.data.result
+  //   }
   // },
+
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories", {
         version: context.isDev ? "draft" : "published",
-        starts_with: "blog/"
+        starts_with: "blog/" 
       })
       .then(res => {
         return {

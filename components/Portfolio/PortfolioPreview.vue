@@ -1,7 +1,7 @@
 <template>
   <b-col cols="12" md="6" lg="4">
     <nuxt-link
-      :to="'/blog/' + id"
+      :to="'/portfolio/' + id"
       class="post-preview">
       <article>
         <div
