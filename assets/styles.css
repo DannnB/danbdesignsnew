@@ -27,7 +27,7 @@ body {
 
 .intro h1 {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4.5rem;
   color: white;
   text-transform: uppercase;
   /* margin: 60px 0 -10px 0px; */
@@ -49,6 +49,9 @@ body {
     .container {
         width: 900px;
     }
+    .container.large {
+        width: 1160px;
+  }
 }
 
 @media (max-width: 767px) {

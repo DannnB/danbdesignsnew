@@ -2,8 +2,10 @@
   <div class="home">
     <div class="intro">
       <div class="overlay">
-        <h1>DanB - Frontend Engineer</h1>
-        <p>I am a web developer &amp; designer from Worcester, UK.</p>
+        <b-container class="large">
+          <h1>DanB - Frontend Engineer</h1>
+          <p>I am a web developer &amp; designer from Worcester, UK.</p>
+        </b-container>
       </div>
     </div>
 
@@ -14,7 +16,6 @@
         </b-col>
       </b-row>
       <b-row>
-        
         <PostPreview
           v-for="post in posts"
           :key="post.id"
@@ -37,6 +38,24 @@ export default {
   components: {
     PostPreview
   },
+  // asyncData(context) {
+  //   return context.app.$storyapi
+  //     .get("cdn/stories", {
+  //       version: context.isDev ? "draft" : "published",
+  //       starts_with: "home"
+  //     })
+  //     .then(res => {
+  //       return {
+  //         page: res.data.stories.map(bp => {
+  //           return {
+  //             id: bp.slug,
+  //             title: bp.content.title,
+  //             subtitle: bp.content.subtitle
+  //           };
+  //         })
+  //       };
+  //     });
+  // },
   asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories", {
@@ -58,27 +77,6 @@ export default {
         };
       });
   }
-
-  // data() {
-  //   return {
-  //     posts: [
-  //       {
-  //         title: "A New Beginning",
-  //         previewText: "This will be awesome, don't miss it!",
-  //         thumbnailUrl:
-  //           "http://www.healthyfood.co.uk/wp-content/uploads/2015/01/Cherry-tomato-bocc-olive-basil-pasta.jpg",
-  //         id: "a-new-beginning"
-  //       },
-  //       {
-  //         title: "A Second Beginning",
-  //         previewText: "This will be awesome, don't miss it!",
-  //         thumbnailUrl:
-  //           "http://www.healthyfood.co.uk/wp-content/uploads/2015/01/Cherry-tomato-bocc-olive-basil-pasta.jpg",
-  //         id: "a-second-beginning"
-  //       }
-  //     ]
-  //   };
-  // }
 };
 </script>
 

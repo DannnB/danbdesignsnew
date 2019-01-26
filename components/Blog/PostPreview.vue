@@ -12,7 +12,7 @@
           <p>{{ excerpt }}</p>
         </div>
         <div class="post-preview-meta">
-          <p>Date: {{ published }} </p>
+          <p>Date Published: <time>{{ published }}</time></p>
         </div>
       </article>
     </nuxt-link>
