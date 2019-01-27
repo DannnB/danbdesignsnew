@@ -7,13 +7,13 @@
       </div>
     </div>
     <section class="section post-content">
-      <!-- <ul class="tag-list">
+      <ul class="tag-list">
         <li v-for="tag in tag_list" :key="tag">
           {{ tag }}
         </li>
       </ul>
       <p>{{ published }}</p>
-      <hr> -->
+      <hr>
       <a href="/portfolio" title="Back to the portfolio page">&lsaquo; Back to portfolio</a>
       <div v-html="content"></div>
     </section>
@@ -70,7 +70,7 @@ export default {
 
 .tag-list {
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .tag-list li {
