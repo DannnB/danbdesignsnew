@@ -4,9 +4,18 @@
       <div class="overlay">
         <b-container class="large">
           <h1>DanB - Frontend Engineer</h1>
-          <p>I am a web developer &amp; designer from Worcester, UK.</p>
+          <p>A web developer &amp; designer from Worcester, UK.</p>
         </b-container>
       </div>
+    </div>
+    <div class="section grey">
+      <b-container>
+        <b-row>
+          <b-col>
+            <p class="intro-content">Highly experienced and creative web engineer. With a keen interest in technology, mobile applications and user experience. Being self-taught I take authority of my own personal development. This means I regularly update my skills and enjoy a challenge. This has allowed me to accomplish a strong background in JavaScript (Frontend/Backend), HTML, CSS(SCSS), Accessibility and SEO practices. Passionate about all things digital, clean reusable code and developing the best services and products.</p>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
 
     <b-container>
@@ -26,6 +35,30 @@
           :published="post.published"/>
       </b-row>
     </b-container>
+    
+    <div class="section grey">
+      <b-container>
+        <b-row class="blog-header">
+          <b-col>
+            <h2>Recommendations</h2>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="12">
+            <blockquote>
+              Dan has great level of knowledge when it comes to front end &amp; back end development which he continues to build on. He is confident in meetings and communicates well with clients and co-workers. Dan is a team player Friendly and helpful and always willing to go the extra mile whenever I was working on a project with him. Off his own back Dan did a large amount of research into advanced analytics and SEO. I would not hesitate to recommend Dan.
+              <cite>Emma Hamilton - Director</cite>
+            </blockquote>
+          </b-col>
+          <b-col cols="12">
+            <blockquote>
+              I had the pleasure of managing and working with Dan for close to two years during my time at Citizen and Native. In that time, I've seen him not only excel at the core elements of his role as a front-end developer, but also learn other skills that extend beyond the scope of his role, into back-end development. In order to not only widen his knowledge but offer continuous support to his colleagues. No matter what was thrown at Dan, he would always go above and beyond to solve any problem, leaving no stone unturned, a clear drive and determination to give his all. A big team player, offering his valuable opinion on project work, aiding us to produce our best work. I saw Dan take huge strides since his first day at Citizen, developing into a knowledgeable, proactive all-round developer who makes an instant impact on any project. I would highly recommend Dan as an extremely talented individual.
+              <cite>Philip Pountney - Full Stack Digital Designer</cite>
+            </blockquote>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -79,6 +112,16 @@ export default {
 </script>
 
 <style>
+blockquote {
+  border-left: 4px solid #424242;
+  padding: 0 0 0 30px;
+  margin-bottom: 40px;
+}
+blockquote cite {
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
+}
 /* #posts {
   padding-top: 2rem;
   display: flex;

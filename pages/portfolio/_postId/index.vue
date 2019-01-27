@@ -6,14 +6,15 @@
         <h1>{{ title }}</h1>
       </div>
     </div>
-    <section class="post-content">
-      <ul class="tag-list">
+    <section class="section post-content">
+      <!-- <ul class="tag-list">
         <li v-for="tag in tag_list" :key="tag">
           {{ tag }}
         </li>
       </ul>
       <p>{{ published }}</p>
-      <hr>
+      <hr> -->
+      <a href="/portfolio" title="Back to the portfolio page">&lsaquo; Back to portfolio</a>
       <div v-html="content"></div>
     </section>
   </div>
@@ -88,6 +89,21 @@ export default {
 
 .post-content p {
   white-space: pre-line;
+}
+
+.post-content img {
+  width: 100%;
+}
+
+.post-content a {
+  display: block;
+  color: #545454;
+  margin: 0 0 30px 0;
+  font-size: 1.2rem;
+}
+.post-content a:hover {
+  text-decoration: none;
+  color: black;
 }
 </style>
 

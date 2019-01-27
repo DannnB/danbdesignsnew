@@ -11,9 +11,9 @@
           <h2>{{ title }}</h2>
           <p>{{ excerpt }}</p>
         </div>
-        <div class="post-preview-meta">
+        <!-- <div class="post-preview-meta">
           <p>Date Published: <time>{{ published }}</time></p>
-        </div>
+        </div> -->
       </article>
     </nuxt-link>
   </b-col>
@@ -55,8 +55,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
-
 
 .post-preview {
   /* border-radius: 3px; */

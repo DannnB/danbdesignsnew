@@ -14,8 +14,7 @@
           :title="post.title"
           :excerpt="post.previewText"
           :thumbnailImage="post.thumbnailUrl"
-          :id="post.id" 
-          :published="post.published"/>
+          :id="post.id" />
       </b-row>
     </b-container>
 
@@ -53,10 +52,7 @@ export default {
               id: bp.slug,
               title: bp.content.title,
               previewText: bp.content.excerpt,
-              thumbnailUrl: bp.content.thumbnailImage,
-              published: 
-                moment(bp.published_at)
-                .format('DD/MM/YY h:mm a')   
+              thumbnailUrl: bp.content.thumbnailImage
             };
           })
         };
