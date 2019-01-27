@@ -1,4 +1,4 @@
-# My Personal Website made witg Storyblok
+# My Personal Website made with Storyblok
 Using Nuxt.js and Vue.js
 
 
