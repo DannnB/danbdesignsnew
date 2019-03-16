@@ -4,7 +4,7 @@
       <div class="overlay">
         <b-container class="large">
           <h1>DanB - Frontend Engineer</h1>
-          <p>A web developer &amp; designer from Worcester, UK.</p>
+          <p class="banner_content">A web developer &amp; designer from Worcester, UK. Currently working for <a href="https://www.morgan-motor.co.uk" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
         </b-container>
       </div>
     </div>
@@ -12,6 +12,7 @@
       <b-container>
         <b-row>
           <b-col>
+            <h2>Currently looking for freelance work so please message me with your projects!</h2>
             <p class="intro-content">Highly experienced and creative web engineer. With a keen interest in technology, mobile applications and user experience. Being self-taught I take authority of my own personal development. This means I regularly update my skills and enjoy a challenge. This has allowed me to accomplish a strong background in JavaScript (Frontend/Backend), HTML, CSS(SCSS), Accessibility and SEO practices. Passionate about all things digital, clean reusable code and developing the best services and products.</p>
           </b-col>
         </b-row>
@@ -33,6 +34,9 @@
           :thumbnailImage="post.thumbnailUrl"
           :id="post.id" 
           :published="post.published"/>
+      </b-row>
+      <b-row>
+        <nuxt-link to="/blog" class="btn-primary">See more</nuxt-link>
       </b-row>
     </b-container>
     
@@ -86,14 +90,14 @@ export default {
   //      total: countRes.data.result
   //   }
   // },
-
-  asyncData(context) {
+asyncData(context) {
     return context.app.$storyapi
       .get("cdn/stories", {
         version: context.isDev ? "draft" : "published",
-        starts_with: "blog/" 
+        starts_with: "blog/"
       })
       .then(res => {
+        // console.log("Data: ", res.data.stories);
         return {
           posts: res.data.stories.map(bp => {
             return {
@@ -101,13 +105,45 @@ export default {
               title: bp.content.title,
               previewText: bp.content.excerpt,
               thumbnailUrl: bp.content.thumbnailImage,
-              published: moment(bp.published_at)
-                .format('DD/MM/YY h:mm a')  
+              published: 
+                moment(bp.published_at)
+                .format('DD/MM/YY h:mm a')   
             };
           })
         };
       });
   }
+  // asyncData(context) {
+  //   return context.app.$storyapi
+  //     .get("cdn/stories", {
+  //       version: context.isDev ? "published" : "published"
+  //     })
+  //     .then(res => {
+  //       console.clear();
+  //       // console.log(res.data.stories);
+  //       return {
+  //         // content: res.data.stories.map(content => {            
+  //         //   return {
+  //         //     content: content.slug
+  //         //   }
+  //         // })
+          
+  //         posts: res.data.stories.map(bp => {
+  //           return {
+  //             id: bp.slug,
+  //             title: bp.content.title,
+  //             previewText: bp.content.excerpt,
+  //             thumbnailUrl: bp.content.thumbnailImage,
+  //             published: moment(bp.published_at)
+  //               .format('DD/MM/YY h:mm a')  
+  //           };
+  //         })
+  //       };
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // }
 };
 </script>
 

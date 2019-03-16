@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\web\\game"
+		},
+		{
+			"path": "C:\\xampp\\htdocs\\web\\morgan\\morgan-lang-test\\wp-content\\themes\\twentynineteen"
 		}
 	],
 	"settings": {}

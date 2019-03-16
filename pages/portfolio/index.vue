@@ -8,6 +8,7 @@
     
     <b-container>
       <b-row>
+        <h2>Projects coming soon</h2>
         <PortfolioPreview
           v-for="post in posts"
           :key="post.id"
