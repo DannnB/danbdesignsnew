@@ -1,32 +1,41 @@
 <template>
   <header class="main-header">
-    <nav class="main-nav">
-      <ul class="nav-links">
-        <nuxt-link to="/" tag="li" class="nav-link"><a>Home</a></nuxt-link>
-        <nuxt-link to="/blog" tag="li" class="nav-link"><a>Blog</a></nuxt-link>
-        <nuxt-link to="/portfolio" tag="li" class="nav-link"><a>Portfolio</a></nuxt-link>
-        <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link> -->
-        <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>My Profile</a></nuxt-link> -->
+    <b-container>
+        <b-row>
+          <b-col>
+            <img class="header-logo" src="/logo/logo-danb-designs-landscape.jpg"/>
+          </b-col>
+          <b-col>
+            <nav class="main-nav">
+              <ul class="nav-links">
+                <nuxt-link to="/" tag="li" class="nav-link"><a>Home</a></nuxt-link>
+                <nuxt-link to="/portfolio" tag="li" class="nav-link"><a>Portfolio</a></nuxt-link>
+                <nuxt-link to="/blog" tag="li" class="nav-link"><a>Blog</a></nuxt-link>
+                <!-- <nuxt-link to="/" tag="li" class="nav-link"><a>Freelance Me</a></nuxt-link> -->
+                <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>About</a></nuxt-link> -->
+                <!-- <nuxt-link to="/about" tag="li" class="nav-link"><a>My Profile</a></nuxt-link> -->
 
-        <!-- <a>Logout</a> -->
-        <!-- <a>LOGIN?: {{ loggedInUser.username }}</a> -->
-        <!-- <nuxt-link to="/register" tag="li" class="nav-link"><a>Register</a></nuxt-link> -->
-        <!-- <nuxt-link to="/login" tag="li" class="nav-link"><a>Log in</a></nuxt-link> -->
-      </ul>
-    </nav>
+                <!-- <a>Logout</a> -->
+                <!-- <a>LOGIN?: {{ loggedInUser.username }}</a> -->
+                <!-- <nuxt-link to="/register" tag="li" class="nav-link"><a>Register</a></nuxt-link> -->
+                <!-- <nuxt-link to="/login" tag="li" class="nav-link"><a>Log in</a></nuxt-link> -->
+              </ul>
+            </nav>
+          </b-col>
+        </b-row>
+    </b-container>
   </header>
 </template>
 
 <style scoped>
   .main-header {
-    margin: 40px 0;
-    height: 40px;
-    /* position: fixed;
-    top: 0;
-    left: 0;
+    position:fixed;
+    z-index: 100;
     width: 100%;
-    background: #022d30;
-    height: 4.5rem; */
+    background-color: #fff;
+  }
+  .header-logo {
+    max-width: 190px;
   }
 
   .main-nav {
@@ -56,7 +65,7 @@
     border-bottom: 3px solid #424242;
   } */
   .nav-link.nuxt-link-exact-active {
-    border-bottom: 3px solid #424242;
+    /* border-bottom: 3px solid #424242; */
   }
 
   .nav-link a {

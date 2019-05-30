@@ -1,12 +1,11 @@
 <template>
-  <div class="blog">
-    <div class="intro">
-      <div class="overlay">
-        <h1>Blog</h1>
-      </div>
-    </div>
-    
+  <div class="section blog normal-page">    
     <b-container>
+      <b-row>
+        <b-col>
+          <h1>Blog</h1>
+        </b-col>
+      </b-row>
       <b-row>
         <PostPreview
           v-for="post in posts"
@@ -18,7 +17,7 @@
           :published="post.published"/>
       </b-row>
     </b-container>
-
+    
   </div>
 </template>
 
