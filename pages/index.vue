@@ -4,10 +4,10 @@
       <b-container class="large">
         <b-row>
           <b-col>
-            <h1>I'm Dan B<br> a <strong>Frontend Engineer</strong></h1>
+            <h1>I'm Dan B<br> a <strong>Web Engineer</strong></h1>
           <p class="lead">
             A full stack developer &amp; designer from Worcester, UK. Specialising in NodeJS, VueJS, ExpressJS, API development and all frontend work. Currently working for 
-            <a href="https://www.morgan-motor.co.uk" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
+            <a href="https://www.morgan-motor.com" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
           </b-col>          
           <b-col>
             <div class="clouds">
