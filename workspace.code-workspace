@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "C:\\xampp\\htdocs\\web\\morgan\\morgan-lang-test\\wp-content\\themes\\twentynineteen"
+		},
+		{
+			"path": "C:\\web\\apis\\morgan\\mmc_api_server"
 		}
 	],
 	"settings": {}
