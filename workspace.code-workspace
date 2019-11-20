@@ -4,13 +4,13 @@
 			"path": "."
 		},
 		{
-			"path": "C:\\xampp\\htdocs\\web\\game"
-		},
-		{
-			"path": "C:\\xampp\\htdocs\\web\\morgan\\morgan-lang-test\\wp-content\\themes\\twentynineteen"
-		},
-		{
 			"path": "C:\\web\\apis\\morgan\\mmc_api_server"
+		},
+		{
+			"path": "C:\\web\\usersystem"
+		},
+		{
+			"path": "C:\\Users\\Dan\\Desktop\\usersystem"
 		}
 	],
 	"settings": {}

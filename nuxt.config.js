@@ -88,7 +88,7 @@ module.exports = {
         return [
           '/',
           '/blog',
-          '/about',
+          // '/about',
           ...blogPosts
         ]
       });
