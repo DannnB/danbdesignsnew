@@ -3,8 +3,10 @@
     <div class="intro">
       <div class="overlay">
         <b-container class="large">
-          <h1>DanB - Frontend Engineer</h1>
-          <p class="banner_content">A web developer &amp; designer from Worcester, UK. Currently working for <a href="https://www.morgan-motor.co.uk" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
+          <h1>I'm Dan B<br> a <strong>Frontend Engineer</strong></h1>
+          <p class="lead">
+            A full stack developer &amp; designer from Worcester, UK. Specialising in NodeJS, VueJS, ExpressJS, API development and all frontend work. Currently working for 
+            <a href="https://www.morgan-motor.co.uk" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
         </b-container>
       </div>
     </div>
@@ -12,7 +14,7 @@
       <b-container>
         <b-row>
           <b-col>
-            <h2>Currently looking for freelance work so please message me with your projects!</h2>
+            <h2>Currently looking for exciting freelance work or remote support work so please message me with your projects.</h2>
             <p class="intro-content">Highly experienced and creative web engineer. With a keen interest in technology, mobile applications and user experience. Being self-taught I take authority of my own personal development. This means I regularly update my skills and enjoy a challenge. This has allowed me to accomplish a strong background in JavaScript (Frontend/Backend), HTML, CSS(SCSS), Accessibility and SEO practices. Passionate about all things digital, clean reusable code and developing the best services and products.</p>
           </b-col>
         </b-row>
