@@ -1,16 +1,44 @@
 <template>
   <div class="home">
-    <div class="intro">
-      <div class="overlay">
-        <b-container class="large">
-          <h1>I'm Dan B<br> a <strong>Frontend Engineer</strong></h1>
+    <div class="section intro">
+      <b-container class="large">
+        <b-row>
+          <b-col>
+            <h1>I'm Dan B<br> a <strong>Frontend Engineer</strong></h1>
           <p class="lead">
             A full stack developer &amp; designer from Worcester, UK. Specialising in NodeJS, VueJS, ExpressJS, API development and all frontend work. Currently working for 
             <a href="https://www.morgan-motor.co.uk" rel="nofollow" target="_blank" alt="View the Morgan Motor Company website">Morgan Motor Company</a></p>
-        </b-container>
-      </div>
+          </b-col>          
+          <b-col>
+            <div class="clouds">
+              <div class="cloud medium one">
+                <span>VUEJS</span>
+              </div>
+              <div class="cloud large two">
+                <span>EXPRESSJS</span>
+              </div>
+              <div class="cloud medium three">
+                <span>CSS</span>
+              </div>
+              <div class="cloud medium four">
+                <span>NODEJS</span>
+              </div>
+              <div class="cloud medium five">
+                <span>A11Y</span>
+              </div>
+              <div class="cloud medium six">
+                <span>HTML</span>
+              </div>
+              <div class="cloud small seven">
+                <span>PHP</span>
+              </div>
+            </div>
+          </b-col>          
+        </b-row>
+      </b-container>
     </div>
-    <div class="section grey">
+    <div class='icon-scroll'></div>
+    <div class="section">
       <b-container>
         <b-row>
           <b-col>
