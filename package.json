@@ -19,7 +19,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap-vue": "^2.0.0-rc.20",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "moment": "^2.23.0",
     "nuxt": "^2.7.1",
     "storyblok-nuxt": "0.0.3"
